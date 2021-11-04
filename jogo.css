@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f1f1;
+    color:#5C0601;
+    font-family: 'Irish Grover', cursive;
+}
+
+.container{
+    display: grid;
+    min-height: 100vh;
+    min-width: 1280px;
+}
+
+.avatar{
+    width: 150px;
+    border: 5px solid #CC5216;
+    border-radius: 15px;
+}
+
+header, footer{
+    display: grid;
+    place-items: center;
+    background-color:#F9943B;
+    color:white;
+    border-bottom: solid #CC5216 10px;
+    text-transform: uppercase;
+    font-family: 'Fruktur', cursive;
+}
+
+footer{
+    border-top: solid #CC5216 10px;
+    border-bottom: none;
+    text-align: center;
+    text-transform: none;
+}
+
+footer p>a{
+    color: #CC5216;
+    text-decoration: none;
+}
+footer p>a:hover{
+    color:#5C0601;
+}
+
+
+#jogo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.jogador{
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+
+.jogador > h2{
+    font-family: 'Fruktur', cursive;
+    font-size: 35px;
+}
+
+.jogador > h3{
+    font-family: 'Fruktur', cursive;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.input{
+    width: 100px;
+    height: 100px;
+    border: solid #CC5216 5px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 60px;
+    color:#5C0601;
+    font-family: 'Ceviche One', cursive;;
+}
+
+.play{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn, .play #mensagem > button{
+    cursor: pointer;
+    width: 200px;
+    padding: 10px;
+    color:white;
+    background-color:#F9943B;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-size: 28px;
+    font-family: 'Fruktur', cursive;
+}
+
+.btn:hover, .play #mensagem > button:hover{
+    background-color:#CC5216;
+}
+
+.play #mensagem > button{
+    width: 180px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.btn:disabled{
+    filter: opacity(50%);
+    background-color: #CC5216;
+    cursor: default;
+}
+
+.input:disabled{
+    background-color: white;
+}
+.input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#mensagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 360px;
+    height: 70px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal{
+    display: grid;
+    place-items: center;
+    background-color:#f3f1f1;
+    width: 60%;
+    padding: 28px;
+    border: 5px solid #CC5216;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+#modal h3{
+    font-size: 46px;
+    padding: 10px;
+}
+
+#modal hr{
+    width: 50%;
+    height: 15px;
+    background-color: #CC5216;
+    border-radius: 15px;
+}
+.btn-close{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 50px;
+    height: 50px;
+    color: #CC5216;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#avatares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-loja{
+    background-color: #F9943B;
+    color: white;
+    height: 135px;
+    margin:5px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.avatar-loja:hover{
+    cursor: pointer;
+    filter: brightness(90%);
+}
+.avatar-loja > img{
+    width: 100px;
+}
+
+#itens-loja{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px;
+}
+
+.pre-visu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-visu.mostrar{
+    display: flex;
+}
+
+.pre-visu > img{
+    border:8px solid #CC5216;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    width: 250px;
+}

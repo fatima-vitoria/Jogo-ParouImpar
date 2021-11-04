@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Par ou ímpar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fruktur&family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>&#x1F383; Par ou ímpar &#x1F383;</h1>
+        </header>
+        <main id="jogo">
+            <div id="player-jogador" class="jogador">
+                <h2>Jogador</h2>
+                <h3>Par</h3>
+            <img src="img/avatar-abobora_diabetica.jpg" alt="Avatar - Abobora Diabetica" class="avatar" id="avatar-player">
+                <input type="text" id="input-jogador" class="input">
+                <div class="placar">&#x1F3C6; Vitórias <span id="vitoria-jogador">0</span></div>
+                <div class="capitalismo">&#x1FA99; Moedas <span id="moedas">0</span></div>    
+            </div>
+
+            <div class="play">
+                <h3>Digite um número de 0 a 10</h3>
+                <h4>Após isso, clique em jogar para iniciar o jogo</h4>
+                <button class="btn" id="btn-play" disabled>Jogar</button>
+                <button class="btn" id="btn-shop">Loja</button>
+
+                <div id="mensagem">
+
+                </div>
+            </div>
+
+            <div id="player-bot" class="jogador">
+                <h2>Computador</h2>
+                <h3>Ímpar</h3>
+                <img src="img/avatar-abobora_diabetica.jpg" alt="Avatar - Padrão" class="avatar" id="avatar-bot">
+                <input type="text" id="input-bot" class="input" disabled>
+                <div class="placar">&#x1F3C6; Vitórias <span id="vitoria-computador">0</span></div>
+            </div>
+        </main> 
+
+        <footer>
+            <p>Avatares feitos pela talentosa artista <a href="https://instagram.com/nekko_artz" target="_blank">@nekko_artz</a> no Instagram<br>PPA 2021 &copy Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <div id="loja-avatares" class="modal-container">
+        <div id="modal">
+            <button class="btn-close" id="fechar">x</button>
+            <h3>&#x1F577; Loja &#x1F577;</h3>
+            <hr>
+            <div id="itens-loja">
+                <div id="avatares">
+
+                    <div class="avatar-loja">
+                        <img src="img/avatar-abobora_diabetica.jpg" alt="Avatar - Padrão" data-opcao="avatar-padrão">
+                        <p class="preco-avatar">&#x2714; Em uso</p>
+                    </div>
+                    <div class="avatar-loja">
+                        <img src="img/avatar-aranha_romantica.jpg" alt="Avatar - Aranha Romantica" data-opcao="avatar-aranha_romantica" >
+                        <p class="preco-avatar">&#x1FA99; 15</p>
+                    </div>
+                    <div class="avatar-loja">
+                        <img src="img/avatar-coelhinho_cobain.jpg" alt="Avatar - Coelho Cobain" data-opcao="avatar-coelho_cobain">
+                        <p class="preco-avatar">&#x1FA99; 25</p>
+                    </div>
+                    <div class="avatar-loja">
+                        <img src="img/avatar-fantasminha_depressivo.jpg" alt="Avatar - Fantasminha Depressivo" data-opcao="avatar-fantasma_depressivo">
+                        <p class="preco-avatar">&#x1FA99; 35</p>
+                    </div>
+
+                </div>
+
+                <div class="pre-visu">
+                    <img src="img/avatar-abobora_diabetica.jpg" alt="Avatar - Abobora Diabetica">
+                    <button class="btn comprar mostrar" data-avatar="avatar-abobora_diabetica">&#x2714; Em uso</button>
+                </div>
+
+                <div class="pre-visu">
+                    <img src="img/avatar-aranha_romantica.jpg" alt="Avatar - Aranha Romantica">
+                    <button class="btn comprar" data-avatar="avatar-aranha_romantica">&#x1FA99; 15</button>
+                </div>
+
+                <div class="pre-visu">
+                    <img src="img/avatar-coelhinho_cobain.jpg" alt="Avatar - Coelho Cobain">
+                    <button class="btn comprar mostrar" data-avatar="avatar-coelho_cobain">&#x1FA99; 25</button>
+                </div>
+
+                <div class="pre-visu">
+                    <img src="img/avatar-fantasminha_depressivo.jpg" alt="Avatar - Fantasminha Depressivo">
+                    <button class="btn comprar mostrar" data-avatar="avatar-fantasma_depressivo">&#x1FA99; 35</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jogo.js"></script>
+
+</body>
+</html>
