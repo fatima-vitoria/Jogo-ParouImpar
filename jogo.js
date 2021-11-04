@@ -8,15 +8,15 @@ let moedasJogador = document.getElementById("moedas");
 let botaoLoja = document.getElementById("btn-shop"); //botao loja
 let lojaAvatares = document.getElementById("loja-avatares");
 let botaoFecharLoja = document.getElementById("fechar");
-let avatarJogador = document.getElementById("avatar-player") //ATENÇÃO AVATAR PLAYER PARA MUDAR AO APLICAR
+let avatarJogador = document.getElementById("avatar-player") 
 let preVisualizador = document.querySelectorAll(".pre-visu");
 let avataresDaLoja = document.querySelectorAll(".avatar-loja");
 let avataresDaLojaPreco = document.querySelectorAll(".preco-avatar");
-let botaoComprar = document.querySelectorAll(".comprar"); //botao de comprar, selecionar enfim
+let botaoComprar = document.querySelectorAll(".comprar"); 
 let botaoComprarSelecionado = null;
-let avatarSelecionado = null; //variavel q vai receber qual foi o avatar selecionado
+let avatarSelecionado = null; 
 let valorCompra = null;
-let avatarAplicado = null; //variavel q vai aplicar o avatar
+let avatarAplicado = null; 
 
 botaoJogar.addEventListener("click", jogo);
 
@@ -27,8 +27,6 @@ botaoLoja.addEventListener("click", abrirLoja);
 botaoFecharLoja.addEventListener("click", fecharLoja);
 
 let compraConfirmada = [1, 0, 0, 0];
-
-// variaveis de funcoes aaaa dor de cabeça :p
 
 let campoValorTexto;
 let campoValorNumero;
